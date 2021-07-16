@@ -7,7 +7,10 @@
 
     <!-- include robots -->
   <include file="$(find multi_turtle_test)/launch/robots.launch" />
-
+  <!-- node that moves bots 1 and 2 -->
   <node pkg="multi_turtle_test" name="bot_mover" type="move_bots.py" output="screen" />
+
+  <!-- this node applies reynolds rules of flocking on the fourth robot-->
+  <node pkg="multi_turtle_test" name="bot_reynolds" type="reynolds.py" output="screen" />
 
 </launch>
