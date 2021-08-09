@@ -2,7 +2,17 @@
 #include <math.h>
 
 
+
+
 using namespace std;
+
+int xRule1, xRule2,xRule3, xRule4,yRule1,yRule2,yRule3,yRule4,xindexControl,yindexControl, weightSum, weight,indexControl, bot1x, bot1y, bot2x, bot2y
+
+
+// void spider(int _rule)
+// {
+//     for (int i = 0; i<)
+// }
 void rule_1() {
     //spider reset
     //rule coords reset
@@ -10,29 +20,31 @@ void rule_1() {
     xRule1 = 0;
     yRule1 = 0;
     
-    void spider (1); // I think it would be a void function
+    //void spider (1); // I think it would be a void function
    
     if (weightSum =! 0) {
         xRule1 = (0 - xRuleCoord) / weightSum;
         yRule1 = (0 - yRuleCoord) / weightSum;
+        
     }
 
     else {
         xRule1 = 0;
         yRule1 = 0;
+        
     }
 }   
-void rule_2() {
+int rule_2() {
     //spider reset
     
-    xRule1 = 0;
-    yRule1 = 0;
+    xRule2 = 0;
+    yRule2 = 0;
     
-    void spider (2); // I think it would be a void function
+    //void spider (2); // I think it would be a void function
    
     if (weightSum =! 0) {
-        xRule1 = (xRule2 / weightSum) - (velocity * cos(radDirection));
-        yRule1 = (yRule2 / weightSum) - (velocity * sin(radDirection));
+        xRule2 = (xRule2 / weightSum) - (velocity * cos(radDirection));
+        yRule2 = (yRule2 / weightSum) - (velocity * sin(radDirection));
     }
 
     else {
@@ -47,7 +59,7 @@ void rule_3() {
     xRule3 = 0;
     yRule3 = 0;
     
-    void spider (3); // I think it would be a void function
+   // void spider (3); // I think it would be a void function
    
     if (weightSum =! 0) {
         xRule3 = xRuleCoord / weightSum;
@@ -164,4 +176,12 @@ int interpret()
     }
     }
 
+}
+
+int main (int x1, int x2,int y1, int y2)
+{
+    bot1x = x1;
+    bot1y = y1;
+    bot2x = x2;
+    bot2y = y2;
 }
