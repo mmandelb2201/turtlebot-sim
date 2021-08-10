@@ -13,7 +13,7 @@ int xRule1, xRule2,xRule3, xRule4,yRule1,yRule2,yRule3,yRule4,xindexControl,yind
 // {
 //     for (int i = 0; i<)
 // }
-void rule_1() {
+int rule_1() {
     //spider reset
     //rule coords reset
     
@@ -25,13 +25,13 @@ void rule_1() {
     if (weightSum =! 0) {
         xRule1 = (0 - xRuleCoord) / weightSum;
         yRule1 = (0 - yRuleCoord) / weightSum;
-        
+        return 1;
     }
 
     else {
         xRule1 = 0;
         yRule1 = 0;
-        
+        return 0;
     }
 }   
 int rule_2() {
@@ -45,11 +45,13 @@ int rule_2() {
     if (weightSum =! 0) {
         xRule2 = (xRule2 / weightSum) - (velocity * cos(radDirection));
         yRule2 = (yRule2 / weightSum) - (velocity * sin(radDirection));
+        return 1;
     }
 
     else {
         xRule2 = 0;
         yRule2 = 0;
+        return 0;
     }
 }   
 void rule_3() {
@@ -64,11 +66,13 @@ void rule_3() {
     if (weightSum =! 0) {
         xRule3 = xRuleCoord / weightSum;
         yRule3 = yRuleCoord / weightSum;
+        return 1;
     }
 
     else {
         xRule3 = 0;
         yRule3 = 0;
+        return 0;
     }
 }   
 void rule_4() {
@@ -82,6 +86,7 @@ void rule_4() {
 
     xRule4 = (((cos(xindexControl + 180) * (LOID_OFFSET * UNIT_LENGTH)) + xindexControl) - xposition) / UNIT_LENGTH;
     yRule4 = (((cos(yindexControl + 180) * (LOID_OFFSET * UNIT_LENGTH)) + yindexControl) - yposition) / UNIT_LENGTH;
+    return 1;
 }   
 
 int interpret()
